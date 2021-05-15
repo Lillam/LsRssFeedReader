@@ -27,7 +27,7 @@ class UserController extends Controller
     * @param Request $request
     * @return Application|Factory|View
     */
-    public function _viewUserLogin(Request $request): Application|Factory|View|RedirectResponse
+    public function _viewUserLogin(Request $request): mixed
     {
         $this->vs->setTitle('Login');
 
@@ -67,7 +67,7 @@ class UserController extends Controller
     * @param Request $request
     * @return Application|Factory|View
     */
-    public function _viewUserDashboard(Request $request): Application|Factory|View
+    public function _viewUserDashboard(Request $request): mixed
     {
         $user = Auth::user();
         $user->load('feeds', 'feeds.feed_view_log');
@@ -95,7 +95,7 @@ class UserController extends Controller
     * @param Request $request
     * @return Application|Factory|View|RedirectResponse
     */
-    public function _viewUserRegister(Request $request): Application|Factory|View|RedirectResponse
+    public function _viewUserRegister(Request $request): mixed
     {
         $this->vs->setTitle('Register');
 

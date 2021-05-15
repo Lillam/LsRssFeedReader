@@ -3,12 +3,15 @@ This is a project for creating an RSS feed reading and subscribing system...
 
 ### Pre Requisites:
 
-- PHP 8.0
+- PHP 7.3^ | 8.0
 
 ### Setting up
 
-Step 1: upon running git clone https://github.com/Lillam/LsRssFeedReader.git you are going to want to run: composer 
-install from the root directory as this is going to install all the base laravel components.
+Step 1: upon running git clone https://github.com/Lillam/LsRssFeedReader.git you are going to want to run: 
+``` 
+composer install
+``` 
+from the root directory as this is going to install all the base laravel components.
 
 Step 2: you can achieve this in two ways, you can either: cp ./.env.example ./.env which will copy the example env file
 or you can simply just create the .env file, either way you are going to want to paste these values in:
@@ -27,14 +30,14 @@ DB_CONNECTION=sqlite
 DB_FOREIGN_KEYS=true
 ```
 
-Step 4: This is a project that relies on SQLite to which we are going to want to run the following:
+Step 3: This is a project that relies on SQLite to which we are going to want to run the following:
 ```
 touch database/database.sqlite
 ```
 running the above is going to generate a file in the database directory and this is going to be the 
 primary source of all data entering the application.
 
-Step 5: assuming that the SQLite database has been made... we can assume that things are good to go from here and
+Step 4: assuming that the SQLite database has been made... we can assume that things are good to go from here and
 we can now run the following: 
 ```
 php artisan migrate

@@ -50,10 +50,12 @@ class RssFeedController extends Controller
                 'read_items' => null
             ]);
         } catch (Exception $exception) {
+            // todo we could potentially add form of logging here and let a channel means knowing that something went
+            //      wrong and needs to be looked into (potentially slack, discord or even simply a log file).
             Session::flash('message', 'Please provide a valid rss source');
         }
 
-        return back();
+        return redirect()->route('dashboard');
     }
 
     /**
@@ -72,7 +74,7 @@ class RssFeedController extends Controller
     * @param RssFeed $feed
     * @return Application|Factory|View
     */
-    public function _viewRssFeed(Request $request, RssFeed $feed): Application|Factory|View
+    public function _viewRssFeed(Request $request, RssFeed $feed): mixed
     {
         $this->vs->setTitle("Feeds | {$feed->title}");
 

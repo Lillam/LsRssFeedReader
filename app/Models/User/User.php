@@ -5,7 +5,6 @@ namespace App\Models\User;
 use App\Models\Feed\RssFeed;
 use App\Models\Feed\RssFeedViewLog;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
