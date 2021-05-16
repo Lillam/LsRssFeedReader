@@ -4,6 +4,7 @@ This is a project for creating an RSS feed reading and subscribing system...
 ### Pre Requisites:
 
 - PHP 7.3^ | 8.0
+- SQLite 3.8.8^
 
 ### Setting up
 
